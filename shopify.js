@@ -1,11 +1,4 @@
-// paymentStatusSDK.js
 (function(window, document) {
-    // Load SweetAlert2
-    const script = document.createElement('script');
-    script.src = "https://cdn.jsdelivr.net/npm/sweetalert2@10";
-    script.onload = init;
-    document.head.appendChild(script);
-
     function init() {
         document.addEventListener('DOMContentLoaded', function() {
             // Show the loading message using SweetAlert2
@@ -80,25 +73,32 @@
             }, 3000);
         });
     }
-})(window, document);
 
-// Add the button styles
-const style = document.createElement('style');
-style.textContent = `
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2ec56e;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  .button:hover {
-    background-color: #1e2a3a;
-    color: #2ec56e;
-    cursor: pointer;
-  }
-`;
-document.head.appendChild(style);
+    // Load SweetAlert2
+    const script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/sweetalert2@10";
+    script.onload = init;
+    document.head.appendChild(script);
+
+    // Add the button styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ec56e;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #1e2a3a;
+            color: #2ec56e;
+            cursor: pointer;
+        }
+    `;
+    document.head.appendChild(style);
+
+})(window, document);
